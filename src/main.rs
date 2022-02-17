@@ -13,6 +13,7 @@ USAGE
 
 #[tokio::main]
 async fn main() -> std::io::Result<()> {
+    env_logger::init();
     let mut parsed: Args = Default::default();
     let mut args = std::env::args().into_iter();
     args.next().unwrap();
